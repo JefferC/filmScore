@@ -38,7 +38,7 @@ def get_data(url,num_dir):
         if "html_file" in vars():
             html_file.close()
 
-def Exec_Html(html_file,text_file):
+def Process_Html(html_file,text_file):
     html_file_ob = open(html_file,'r')
     txt_file = html_file_ob.read()
     html_file_ob.close()
@@ -137,11 +137,11 @@ def main():
             print "Get Data Failed"
             exit(12)
     if exec_html_ornot:
-        _animes =  Exec_Html(html_dir,text_dir)
+        _animes =  Process_Html(html_dir,text_dir)
         if _animes:
-            print "Exec Html Done"
+            print "Html Done"
         else:
-            print "Exec Html Failed"
+            print "Html Failed"
     Nltk_get_feature(_animes)
 
 
