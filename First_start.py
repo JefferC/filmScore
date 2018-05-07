@@ -1,9 +1,8 @@
 # coding:utf-8
-import nltk,urllib2,pandas,os,time
+import nltk,urllib2,os#,time,pandas
 import BeautifulSoup as bs
-import jieba.posseg as pseg
+#import jieba.posseg as pseg
 
-import urllib2
 
 
 #Page = [str(p) for p in xrange(Page_limt)]
@@ -21,7 +20,6 @@ _animes =[]
 
 def get_data(url,num_dir):
     try:
-        print url
         dl = urllib2.Request(url)
         dl.add_header("User-Agent","Mozilla/5.0")
         dilidili = urllib2.urlopen(dl)
